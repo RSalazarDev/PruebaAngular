@@ -1,0 +1,28 @@
+<div class="jumbotron">
+  <h1 class="display-3">Jumbo heading</h1>
+  <p class="lead">Jumbo helper text</p>
+  <hr class="my-2">
+  <p>More info</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" routerLink="/about" role="button">Jumbo action name</a>
+  </p>
+  <div class="container">
+    <input type="number" [(ngModel)]="numero1">
+    <input type="number" [(ngModel)]="numero2">
+    <h3>{{numero1+numero2}}</h3>
+    <p *ngIf="numero1==0">El numero 1 es un 0</p>
+
+    <ul>
+      <li *ngFor="let letra of letras">{{letra}}</li>
+
+    </ul>
+
+    <ul>
+      <li (click)="mostrarUsuario(usuario)" *ngFor="let usuario of usuarios">
+        Nombre: <b>{{usuario.nombre}}</b> and Apellido: <b>{{usuario.apellido}}</b>
+      </li>
+    </ul>
+    <p>{{usu.nombre + " " +usu.apellido}}</p>
+  </div>
+
+</div>
